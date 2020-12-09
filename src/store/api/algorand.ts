@@ -35,7 +35,7 @@ export function createMultiSigAddress(payload: {
             payload.owner1,
             payload.owner2,
             payload.owner3
-        ],
+        ].sort(),
     };
     try {
         return algosdk.multisigAddress(mparams);;
@@ -107,7 +107,7 @@ export async function initiateNewMsigTransaction(
             msigParams.owner1,
             msigParams.owner2,
             msigParams.owner3,
-        ],
+        ].sort(),
     };
     let txn = {
         "from": algosdk.multisigAddress(msigparams),

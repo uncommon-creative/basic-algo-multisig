@@ -22,7 +22,7 @@ export function FundMsig() {
 
     useEffect(() => {
         dispatch(UIStore.actions.error(false));
-        if (algosdk.isValidAddress(owner2) && algosdk.isValidAddress(owner3) && algosdk.isValidAddress(owner3)) {
+        if (algosdk.isValidAddress(owner1) && algosdk.isValidAddress(owner2) && algosdk.isValidAddress(owner3)) {
             setMsig(createMultiSigAddress({
                 owner1, owner2, owner3
             }));

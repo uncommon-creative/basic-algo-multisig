@@ -30,12 +30,12 @@ export function NewTransaction() {
 
     useEffect(() => {
         dispatch(UIStore.actions.error(false));
-        if (fstBlob !== undefined) {
+        if (fstBlob !== "") {
             SetShowBlob(true);
         }
     }, [fstBlob])
     const toggleModal = () => {
-        console.log('toggled');
+        console.log('toggled', showBlob);
         SetShowBlob(!showBlob);
     }
 

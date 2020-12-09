@@ -16,7 +16,14 @@ function* willMultiSignTransaction(action: PayloadAction<any>) {
     console.log('in willMultiSignTransaction saga with action :', action.payload);
     try {
         let multi = yield call(createMultiSigAddress, action.payload);
-        yield put(AlgorandStore.actions.setMultiSigAddress({ ...action.payload, addr: multi }));
+        console.log('MULTISIG', multi);
+        let temparray = [action.payload.owner1, action.payload.owner2, action.payload.owner3].sort();
+        yield put(AlgorandStore.actions.setMultiSigAddress({
+            owner1: temparray[0],
+            owner2: temparray[1],
+            owner3: temparray[2],
+            addr: multi
+        }));
     }
     catch (e) {
         console.log('multiSign error', e);

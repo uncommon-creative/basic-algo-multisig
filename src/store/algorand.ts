@@ -57,7 +57,11 @@ export const algorandSlice = createSlice({
         setConnected(state, action: PayloadAction<boolean>) { state.connected = action.payload },
         setCurrentAddress(state, action: PayloadAction<string>) { state.currentAddress = action.payload },
         setMultiSigAddress(state, action: PayloadAction<any>) {
-            state.escrow.multisigParams = action.payload
+            console.log('setMultiSigAddress reducer', action.payload)
+            state.escrow.multisigParams.owner1 = action.payload.owner1;
+            state.escrow.multisigParams.owner2 = action.payload.owner2;
+            state.escrow.multisigParams.owner3 = action.payload.owner3;
+            state.escrow.multisigParams.addr = action.payload.addr;
         },
         setNewEscrow(state, action: PayloadAction<any>) {
             state = update(state, {
