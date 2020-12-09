@@ -1,6 +1,6 @@
 {
     "apiConfig": {
-        "apiKey": "",
-        "baseUrl": ""
+        "apiKey": "YOUR_API_KEY",
+        "baseUrl": "YOUR_URL"
     }
 }
