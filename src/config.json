@@ -1,6 +1,6 @@
 {
     "apiConfig": {
-        "apiKey": "xELAGC1LIV4sJoHvVfxi25cxECITPE1F9OaW8ml8",
-        "baseUrl": "https://testnet-algorand.api.purestake.io/ps2"
+        "apiKey": "",
+        "baseUrl": ""
     }
 }
